@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comparte tus preguntas, reflexiones o peticiones para conversar con líderes cristianos.">
+    <title>Una razón para hablar | La filosofía del Evangelio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER: identidad común del sitio web. -->
+    <header class="site-header">
+        <a class="brand" href="index.html">La filosofía del Evangelio</a>
+        <p class="tagline">Fe, razón y esperanza en diálogo</p>
+    </header>
+
+    <!-- NAV: permite ir a Inicio, Razones y demostraciones y Contacto. -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="razones.html">Razones y demostraciones</a></li>
+            <li><a aria-current="page" href="contacto.html">Una razón para hablar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Conversaciones con respeto</p>
+            <h1>Una razón para hablar</h1>
+            <p class="lead">Las preguntas sobre Dios, la fe, el sufrimiento y el sentido de la vida merecen ser escuchadas. Este espacio está pensado para que puedas compartir una inquietud, una reflexión o una petición de oración.</p>
+            <figure class="wide-image">
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1400&q=85" alt="Personas reunidas conversando en comunidad">
+                <figcaption>Escuchar con atención también es una forma de servir al prójimo.</figcaption>
+            </figure>
+        </section>
+
+        <section class="contact-layout">
+            <div class="contact-copy">
+                <h2>Queremos escucharte</h2>
+                <p>Si estás explorando el cristianismo, tienes preguntas sobre la Biblia o deseas conversar con un pastor o líder, puedes dejar tus datos y explicar brevemente el motivo de tu mensaje.</p>
+                <p>La conversación debe desarrollarse con respeto, cuidado y sin presión. No necesitas tener todas las respuestas para empezar a preguntar.</p>
+                <div class="notice">
+                    <strong>Importante:</strong> este formulario registra la información en la base de datos del proyecto. Utiliza información de prueba y evita compartir datos personales o sensibles.
+                </div>
+            </div>
+
+            <!-- FORMULARIO: action indica el PHP que recibirá los datos. -->
+            <form class="contact-form" action="procesar.php" method="post">
+                <h2>Formulario de contacto</h2>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name"
+                       required placeholder="¿Cómo te llamas?">
+
+                <label for="numero">Número de teléfono</label>
+                <input type="tel" id="numero" name="numero" autocomplete="tel"
+                       required placeholder="Escribe un número de prueba">
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email"
+                       required placeholder="nombre@ejemplo.com">
+
+                <label for="tema">¿Sobre qué te gustaría conversar?</label>
+                <select id="tema" name="tema" required>
+                    <option value="">Selecciona un tema</option>
+                    <option value="biblia">Preguntas sobre la Biblia</option>
+                    <option value="fe-razon">Fe, filosofía y razón</option>
+                    <option value="oracion">Petición de oración</option>
+                    <option value="conversacion">Hablar con un pastor o líder</option>
+                    <option value="otro">Otro tema</option>
+                </select>
+
+                <label for="peticion">Petición o mensaje</label>
+                <textarea id="peticion" name="peticion" rows="6" required
+                          placeholder="Cuéntanos brevemente qué quisieras compartir..."></textarea>
+
+                <label class="consent" for="consentimiento">
+                    <input type="checkbox" id="consentimiento" name="consentimiento"
+                           value="acepto" required>
+                    Confirmo que entiendo que la información será almacenada en la base de datos de este proyecto académico y que no se enviará por correo.
+                </label>
+
+                <button class="button" type="submit">Enviar mensaje</button>
+                <p class="form-help">Los campos marcados son obligatorios. La información será registrada en MySQL.</p>
+            </form>
+        </section>
+
+        <section class="content-section scripture-ending">
+            <h2>Una palabra de cierre</h2>
+            <blockquote>
+                “Todos los llamados de mi nombre; para gloria mía los he creado, los formé y los hice”.
+                <cite>Isaías 43:7, Reina-Valera 1960 (RVR1960)</cite>
+            </blockquote>
+            <p>En su contexto, Isaías 43 habla de la restauración y esperanza del pueblo de Dios. Este versículo recuerda, dentro de la fe bíblica, que la vida humana tiene un propósito relacionado con Dios. Leámoslo considerando su contexto y no como una frase aislada.</p>
+        </section>
+    </main>
+
+    <!-- FOOTER: cierra la página y mantiene los enlaces del sitio accesibles. -->
+    <footer class="site-footer">
+        <p><strong>La filosofía del Evangelio</strong> · Fe, razón y esperanza en diálogo.</p>
+        <p><a href="index.html">Inicio</a> · <a href="razones.html">Razones y demostraciones</a> · <a href="contacto.html">Contacto</a></p>
+        <small>Gracias por compartir la conversación con respeto.</small>
+    </footer>
+</body>
+</html>
